@@ -1,0 +1,57 @@
+{
+  "total_scenarios": 6,
+  "total_steps": 33,
+  "overall_accuracy": 0.32857142857142857,
+  "avg_threat_score": 71.36869047619048,
+  "peak_threat_score": 95.0,
+  "scenarios": [
+    {
+      "name": "APT29_Cozy_Bear",
+      "accuracy": 0.5714,
+      "avg_score": 74.5,
+      "peak_score": 95.0,
+      "peak_level": "LOW",
+      "steps": 8
+    },
+    {
+      "name": "Ransomware_LockBit",
+      "accuracy": 0.5,
+      "avg_score": 73.0,
+      "peak_score": 91.4,
+      "peak_level": "LOW",
+      "steps": 5
+    },
+    {
+      "name": "Insider_Threat",
+      "accuracy": 0.0,
+      "avg_score": 69.2,
+      "peak_score": 77.0,
+      "peak_level": "LOW",
+      "steps": 3
+    },
+    {
+      "name": "Supply_Chain_Attack",
+      "accuracy": 0.1667,
+      "avg_score": 76.8,
+      "peak_score": 95.0,
+      "peak_level": "LOW",
+      "steps": 7
+    },
+    {
+      "name": "Credential_Stuffing",
+      "accuracy": 0.3333,
+      "avg_score": 61.6,
+      "peak_score": 78.0,
+      "peak_level": "LOW",
+      "steps": 4
+    },
+    {
+      "name": "Web_App_Exploit",
+      "accuracy": 0.4,
+      "avg_score": 73.2,
+      "peak_score": 91.4,
+      "peak_level": "LOW",
+      "steps": 6
+    }
+  ]
+}

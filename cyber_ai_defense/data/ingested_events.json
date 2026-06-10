@@ -1,0 +1,146 @@
+[
+  {
+    "timestamp": "2026-03-13T02:13:31.975001",
+    "src_ip": "192.168.1.50",
+    "event_type": "generic",
+    "stage": "Discovery",
+    "confidence": 0.4,
+    "rule": "fallback"
+  },
+  {
+    "timestamp": "13/Mar/2026:02:00:10 +0000",
+    "src_ip": "192.168.1.50",
+    "event_type": "http_request",
+    "stage": "Reconnaissance",
+    "confidence": 0.8,
+    "rule": "web_enum"
+  },
+  {
+    "timestamp": "13/Mar/2026:02:00:11 +0000",
+    "src_ip": "192.168.1.50",
+    "event_type": "http_request",
+    "stage": "Reconnaissance",
+    "confidence": 0.8,
+    "rule": "web_enum"
+  },
+  {
+    "timestamp": "13/Mar/2026:02:00:12 +0000",
+    "src_ip": "192.168.1.50",
+    "event_type": "http_request",
+    "stage": "Reconnaissance",
+    "confidence": 0.8,
+    "rule": "web_enum"
+  },
+  {
+    "timestamp": "Mar 13 02:01:00",
+    "src_ip": "192.168.1.50",
+    "event_type": "ssh_failed",
+    "stage": "Credential Access",
+    "confidence": 0.9,
+    "rule": "ssh_brute"
+  },
+  {
+    "timestamp": "Mar 13 02:01:01",
+    "src_ip": "192.168.1.50",
+    "event_type": "ssh_failed",
+    "stage": "Credential Access",
+    "confidence": 0.9,
+    "rule": "ssh_brute"
+  },
+  {
+    "timestamp": "Mar 13 02:01:02",
+    "src_ip": "192.168.1.50",
+    "event_type": "ssh_failed",
+    "stage": "Credential Access",
+    "confidence": 0.9,
+    "rule": "ssh_brute"
+  },
+  {
+    "timestamp": "13/Mar/2026:02:02:00 +0000",
+    "src_ip": "192.168.1.50",
+    "event_type": "http_request",
+    "stage": "Exploitation",
+    "confidence": 0.88,
+    "rule": "web_exploit_success"
+  },
+  {
+    "timestamp": "13/Mar/2026:02:02:05 +0000",
+    "src_ip": "192.168.1.50",
+    "event_type": "http_request",
+    "stage": "Reconnaissance",
+    "confidence": 0.4,
+    "rule": "fallback"
+  },
+  {
+    "timestamp": "Mar 13 02:03:00",
+    "src_ip": "0.0.0.0",
+    "event_type": "sudo_command",
+    "stage": "Privilege Escalation",
+    "confidence": 0.82,
+    "rule": "sudo_use"
+  },
+  {
+    "timestamp": "Mar 13 02:03:05",
+    "src_ip": "0.0.0.0",
+    "event_type": "sudo_command",
+    "stage": "Persistence",
+    "confidence": 0.88,
+    "rule": "persistence_cmd"
+  },
+  {
+    "timestamp": "Mar 13 02:04:00",
+    "src_ip": "192.168.1.50",
+    "event_type": "ssh_accepted",
+    "stage": "Lateral Movement",
+    "confidence": 0.75,
+    "rule": "ssh_accepted"
+  },
+  {
+    "timestamp": "02:04:10",
+    "src_ip": "192.168.1.50",
+    "event_type": "windows_event",
+    "stage": "Lateral Movement",
+    "confidence": 0.72,
+    "rule": "explicit_logon"
+  },
+  {
+    "timestamp": "2026-03-13T02:05:00",
+    "src_ip": "192.168.1.50",
+    "event_type": "network_conn",
+    "stage": "Reconnaissance",
+    "confidence": 0.7,
+    "rule": "suspicious_port"
+  },
+  {
+    "timestamp": "2026-03-13T02:05:30",
+    "src_ip": "192.168.1.50",
+    "event_type": "network_conn",
+    "stage": "Command & Control",
+    "confidence": 0.78,
+    "rule": "https_beacon"
+  },
+  {
+    "timestamp": "2026-03-13T02:06:00",
+    "src_ip": "192.168.1.50",
+    "event_type": "network_conn",
+    "stage": "Command & Control",
+    "confidence": 0.78,
+    "rule": "https_beacon"
+  },
+  {
+    "timestamp": "Mar 13 02:10:00",
+    "src_ip": "0.0.0.0",
+    "event_type": "sudo_command",
+    "stage": "Privilege Escalation",
+    "confidence": 0.82,
+    "rule": "sudo_use"
+  },
+  {
+    "timestamp": "2026-03-13T02:10:30",
+    "src_ip": "10.0.0.200",
+    "event_type": "network_conn",
+    "stage": "Reconnaissance",
+    "confidence": 0.7,
+    "rule": "suspicious_port"
+  }
+]

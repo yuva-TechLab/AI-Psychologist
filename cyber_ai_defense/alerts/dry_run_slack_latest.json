@@ -1,0 +1,63 @@
+{
+  "username": "CyberAI Defense",
+  "icon_emoji": ":shield:",
+  "channel": "#security-alerts",
+  "attachments": [
+    {
+      "color": "#ef4444",
+      "blocks": [
+        {
+          "type": "header",
+          "text": {
+            "type": "plain_text",
+            "text": "\ud83d\udd34 CRITICAL Threat \u2014 172.16.0.55"
+          }
+        },
+        {
+          "type": "section",
+          "fields": [
+            {
+              "type": "mrkdwn",
+              "text": "*Alert ID*\n`ALERT-10CA686A93`"
+            },
+            {
+              "type": "mrkdwn",
+              "text": "*Score*\n`92/100`"
+            },
+            {
+              "type": "mrkdwn",
+              "text": "*Detected*\nCommand & Control"
+            },
+            {
+              "type": "mrkdwn",
+              "text": "*Predicted next*\nData Exfiltration (96%)"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "text": {
+            "type": "mrkdwn",
+            "text": "*Kill chain*\n`Lateral Movement \u2192 Command & Control`"
+          }
+        },
+        {
+          "type": "section",
+          "text": {
+            "type": "mrkdwn",
+            "text": ":zap: *Recommended action*\nActivate DLP rules. Block large outbound transfers. Isolate NOW."
+          }
+        },
+        {
+          "type": "context",
+          "elements": [
+            {
+              "type": "mrkdwn",
+              "text": "Rule: `https_beacon` | 2026-03-22T10:01:20.539196+00:00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

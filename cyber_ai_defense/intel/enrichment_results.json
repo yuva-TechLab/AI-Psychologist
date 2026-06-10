@@ -1,0 +1,404 @@
+[
+  {
+    "src_ip": "192.168.1.50",
+    "sequence": [
+      "Recon",
+      "Cred Access",
+      "Exploit",
+      "Lateral",
+      "C2"
+    ],
+    "base_score": 88.0,
+    "adjusted_score": 100.0,
+    "risk_level": "CRITICAL",
+    "score_delta": 12.0,
+    "adjustments": [
+      "blocklist(CRITICAL) +20",
+      "abuseipdb_high(85) +10",
+      "vt_malicious(12/90) +8",
+      "shodan_c2_port +7",
+      "shodan_vuln(CVE-2021-44228) +5",
+      "internal_network -10"
+    ],
+    "risk_flags": [
+      "BLOCKLISTED:CRITICAL",
+      "ABUSE:85",
+      "VT_MALICIOUS:12",
+      "C2_PORT_OPEN",
+      "VULN:CVE-2021-44228"
+    ],
+    "geo": {
+      "ip": "192.168.1.50",
+      "country": "Internal",
+      "country_code": "INT",
+      "city": "LAN",
+      "org": "Private Network",
+      "asn": "AS0",
+      "is_private": true,
+      "is_tor": false,
+      "abuseipdb_score": 85,
+      "vt_detections": 12,
+      "vt_total": 90,
+      "vt_malicious": true,
+      "shodan_ports": [
+        22,
+        80,
+        443,
+        4444
+      ],
+      "shodan_tags": [
+        "self-signed",
+        "C2"
+      ],
+      "shodan_vulns": [
+        "CVE-2021-44228"
+      ],
+      "blocklisted": true,
+      "blocklist_reason": "confirmed attacker \u2014 active incident 2026-03-13",
+      "threat_actors": [],
+      "score_delta": 12.0,
+      "adjustments": [
+        "blocklist(CRITICAL) +20",
+        "abuseipdb_high(85) +10",
+        "vt_malicious(12/90) +8",
+        "shodan_c2_port +7",
+        "shodan_vuln(CVE-2021-44228) +5",
+        "internal_network -10"
+      ],
+      "risk_flags": [
+        "BLOCKLISTED:CRITICAL",
+        "ABUSE:85",
+        "VT_MALICIOUS:12",
+        "C2_PORT_OPEN",
+        "VULN:CVE-2021-44228"
+      ],
+      "enriched_at": "2026-03-22T08:46:41.282937+00:00",
+      "source": "simulated"
+    }
+  },
+  {
+    "src_ip": "172.16.0.55",
+    "sequence": [
+      "Lateral Movement",
+      "Command & Control"
+    ],
+    "base_score": 92.0,
+    "adjusted_score": 100.0,
+    "risk_level": "CRITICAL",
+    "score_delta": 8.0,
+    "adjustments": [
+      "blocklist(CRITICAL) +20",
+      "abuseipdb_high(91) +10",
+      "vt_malicious(31/90) +8",
+      "shodan_c2_port +7",
+      "tor_exit +6",
+      "internal_network -10"
+    ],
+    "risk_flags": [
+      "BLOCKLISTED:CRITICAL",
+      "ABUSE:91",
+      "VT_MALICIOUS:31",
+      "C2_PORT_OPEN",
+      "TOR_EXIT"
+    ],
+    "geo": {
+      "ip": "172.16.0.55",
+      "country": "Internal",
+      "country_code": "INT",
+      "city": "LAN",
+      "org": "Private Network",
+      "asn": "AS0",
+      "is_private": true,
+      "is_tor": true,
+      "abuseipdb_score": 91,
+      "vt_detections": 31,
+      "vt_total": 90,
+      "vt_malicious": true,
+      "shodan_ports": [
+        443,
+        8080,
+        9999
+      ],
+      "shodan_tags": [
+        "C2",
+        "tor-exit"
+      ],
+      "shodan_vulns": [],
+      "blocklisted": true,
+      "blocklist_reason": "C2 beacon source",
+      "threat_actors": [],
+      "score_delta": 8.0,
+      "adjustments": [
+        "blocklist(CRITICAL) +20",
+        "abuseipdb_high(91) +10",
+        "vt_malicious(31/90) +8",
+        "shodan_c2_port +7",
+        "tor_exit +6",
+        "internal_network -10"
+      ],
+      "risk_flags": [
+        "BLOCKLISTED:CRITICAL",
+        "ABUSE:91",
+        "VT_MALICIOUS:31",
+        "C2_PORT_OPEN",
+        "TOR_EXIT"
+      ],
+      "enriched_at": "2026-03-22T08:46:41.283061+00:00",
+      "source": "simulated"
+    }
+  },
+  {
+    "src_ip": "10.0.0.200",
+    "sequence": [
+      "Discovery",
+      "Credential Access",
+      "Data Exfiltration"
+    ],
+    "base_score": 77.0,
+    "adjusted_score": 84.0,
+    "risk_level": "HIGH",
+    "score_delta": 7.0,
+    "adjustments": [
+      "blocklist(HIGH) +12",
+      "abuseipdb_medium(72) +5",
+      "internal_network -10"
+    ],
+    "risk_flags": [
+      "BLOCKLISTED:HIGH"
+    ],
+    "geo": {
+      "ip": "10.0.0.200",
+      "country": "Internal",
+      "country_code": "INT",
+      "city": "LAN",
+      "org": "Private Network",
+      "asn": "AS0",
+      "is_private": true,
+      "is_tor": false,
+      "abuseipdb_score": 72,
+      "vt_detections": 0,
+      "vt_total": 90,
+      "vt_malicious": false,
+      "shodan_ports": [],
+      "shodan_tags": [],
+      "shodan_vulns": [],
+      "blocklisted": true,
+      "blocklist_reason": "suspected insider \u2014 under investigation",
+      "threat_actors": [],
+      "score_delta": 7.0,
+      "adjustments": [
+        "blocklist(HIGH) +12",
+        "abuseipdb_medium(72) +5",
+        "internal_network -10"
+      ],
+      "risk_flags": [
+        "BLOCKLISTED:HIGH"
+      ],
+      "enriched_at": "2026-03-22T08:46:41.283142+00:00",
+      "source": "simulated"
+    }
+  },
+  {
+    "src_ip": "91.109.21.10",
+    "sequence": [
+      "Reconnaissance",
+      "Exploitation"
+    ],
+    "base_score": 55.0,
+    "adjusted_score": 83.0,
+    "risk_level": "HIGH",
+    "score_delta": 28.0,
+    "adjustments": [
+      "abuseipdb_medium(60) +5",
+      "vt_malicious(25/90) +8",
+      "threat_actor(APT29 (Cozy Bear), FIN7) +10",
+      "high_risk_country(RU) +5"
+    ],
+    "risk_flags": [
+      "VT_MALICIOUS:25",
+      "APT:APT29 (Cozy Bear)",
+      "COUNTRY:RU"
+    ],
+    "geo": {
+      "ip": "91.109.21.10",
+      "country": "Russia",
+      "country_code": "RU",
+      "city": "Moscow",
+      "org": "Rostelecom",
+      "asn": "AS12389",
+      "is_private": false,
+      "is_tor": false,
+      "abuseipdb_score": 60,
+      "vt_detections": 25,
+      "vt_total": 90,
+      "vt_malicious": true,
+      "shodan_ports": [],
+      "shodan_tags": [],
+      "shodan_vulns": [],
+      "blocklisted": false,
+      "blocklist_reason": "",
+      "threat_actors": [
+        "APT29 (Cozy Bear)",
+        "FIN7"
+      ],
+      "score_delta": 28.0,
+      "adjustments": [
+        "abuseipdb_medium(60) +5",
+        "vt_malicious(25/90) +8",
+        "threat_actor(APT29 (Cozy Bear), FIN7) +10",
+        "high_risk_country(RU) +5"
+      ],
+      "risk_flags": [
+        "VT_MALICIOUS:25",
+        "APT:APT29 (Cozy Bear)",
+        "COUNTRY:RU"
+      ],
+      "enriched_at": "2026-03-22T08:46:41.283201+00:00",
+      "source": "simulated"
+    }
+  },
+  {
+    "src_ip": "185.220.101.1",
+    "sequence": [
+      "Reconnaissance"
+    ],
+    "base_score": 60.0,
+    "adjusted_score": 89.0,
+    "risk_level": "CRITICAL",
+    "score_delta": 29.0,
+    "adjustments": [
+      "abuseipdb_medium(65) +5",
+      "vt_malicious(47/90) +8",
+      "tor_exit +6",
+      "threat_actor(Bulletproof Hosting) +10"
+    ],
+    "risk_flags": [
+      "VT_MALICIOUS:47",
+      "TOR_EXIT",
+      "APT:Bulletproof Hosting"
+    ],
+    "geo": {
+      "ip": "185.220.101.1",
+      "country": "Netherlands",
+      "country_code": "NL",
+      "city": "Amsterdam",
+      "org": "Hosting provider",
+      "asn": "AS206898",
+      "is_private": false,
+      "is_tor": true,
+      "abuseipdb_score": 65,
+      "vt_detections": 47,
+      "vt_total": 90,
+      "vt_malicious": true,
+      "shodan_ports": [
+        9001,
+        9030
+      ],
+      "shodan_tags": [
+        "tor-exit"
+      ],
+      "shodan_vulns": [],
+      "blocklisted": false,
+      "blocklist_reason": "",
+      "threat_actors": [
+        "Bulletproof Hosting"
+      ],
+      "score_delta": 29.0,
+      "adjustments": [
+        "abuseipdb_medium(65) +5",
+        "vt_malicious(47/90) +8",
+        "tor_exit +6",
+        "threat_actor(Bulletproof Hosting) +10"
+      ],
+      "risk_flags": [
+        "VT_MALICIOUS:47",
+        "TOR_EXIT",
+        "APT:Bulletproof Hosting"
+      ],
+      "enriched_at": "2026-03-22T08:46:41.283247+00:00",
+      "source": "simulated"
+    }
+  },
+  {
+    "src_ip": "8.8.8.8",
+    "sequence": [
+      "Reconnaissance"
+    ],
+    "base_score": 25.0,
+    "adjusted_score": 20.0,
+    "risk_level": "SAFE",
+    "score_delta": -5.0,
+    "adjustments": [
+      "trusted_cloud(AS15169) -5"
+    ],
+    "risk_flags": [],
+    "geo": {
+      "ip": "8.8.8.8",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Mountain View",
+      "org": "Google LLC",
+      "asn": "AS15169",
+      "is_private": false,
+      "is_tor": false,
+      "abuseipdb_score": 0,
+      "vt_detections": 0,
+      "vt_total": 90,
+      "vt_malicious": false,
+      "shodan_ports": [],
+      "shodan_tags": [],
+      "shodan_vulns": [],
+      "blocklisted": false,
+      "blocklist_reason": "",
+      "threat_actors": [],
+      "score_delta": -5.0,
+      "adjustments": [
+        "trusted_cloud(AS15169) -5"
+      ],
+      "risk_flags": [],
+      "enriched_at": "2026-03-22T08:46:41.283292+00:00",
+      "source": "simulated"
+    }
+  },
+  {
+    "src_ip": "52.10.0.1",
+    "sequence": [
+      "Reconnaissance"
+    ],
+    "base_score": 45.0,
+    "adjusted_score": 40.0,
+    "risk_level": "LOW",
+    "score_delta": -5.0,
+    "adjustments": [
+      "trusted_cloud(AS16509) -5"
+    ],
+    "risk_flags": [],
+    "geo": {
+      "ip": "52.10.0.1",
+      "country": "United States",
+      "country_code": "US",
+      "city": "Ashburn",
+      "org": "Amazon AWS",
+      "asn": "AS16509",
+      "is_private": false,
+      "is_tor": false,
+      "abuseipdb_score": 0,
+      "vt_detections": 0,
+      "vt_total": 90,
+      "vt_malicious": false,
+      "shodan_ports": [],
+      "shodan_tags": [],
+      "shodan_vulns": [],
+      "blocklisted": false,
+      "blocklist_reason": "",
+      "threat_actors": [],
+      "score_delta": -5.0,
+      "adjustments": [
+        "trusted_cloud(AS16509) -5"
+      ],
+      "risk_flags": [],
+      "enriched_at": "2026-03-22T08:46:41.283342+00:00",
+      "source": "simulated"
+    }
+  }
+]

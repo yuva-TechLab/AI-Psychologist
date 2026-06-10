@@ -1,0 +1,109 @@
+[
+  {
+    "input_sequence": [
+      "Reconnaissance",
+      "Credential Access",
+      "Exploitation"
+    ],
+    "predicted_stage": "Privilege Escalation",
+    "confidence": 0.99,
+    "threat_score": 78.2,
+    "risk_level": "HIGH",
+    "primary_reason": "In 50% of observed sessions where 'Exploitation' was the last detected stage, 'Privilege Escalation' was the next attacker action \u2014 this is the strongest transition signal driving the prediction.",
+    "transition_story": "After observing 'Reconnaissance \u2192 Credential Access \u2192 Exploitation', the model noted that in 50% of historical attack sessions where an attacker was actively exploiting vulnerable services, the next observed action was attempting to gain elevated/admin privileges. The second most likely step was 'Persistence' (28%).",
+    "context_weights": {
+      "Reconnaissance": 0.0,
+      "Credential Access": 0.256,
+      "Exploitation": 0.744
+    },
+    "matched_pattern": {
+      "name": "Classic Credential Pivot",
+      "sequence": [
+        "Reconnaissance",
+        "Credential Access",
+        "Exploitation"
+      ],
+      "description": "Most common enterprise intrusion pattern \u2014 recon leads to credential theft, then exploitation of the gained access.",
+      "prevalence": "Seen in 68% of enterprise breaches (Verizon DBIR)",
+      "match_score": 1.3
+    },
+    "counterfactual": "If 'Reconnaissance' had been blocked, the predicted 'Privilege Escalation' would not have been reached, reducing threat score by approximately 45 points.",
+    "score_breakdown": {
+      "base": 65,
+      "confidence_boost": 9.9,
+      "depth_boost": 3.3
+    }
+  },
+  {
+    "input_sequence": [
+      "Reconnaissance",
+      "Exploitation",
+      "Persistence",
+      "Privilege Escalation",
+      "Lateral Movement"
+    ],
+    "predicted_stage": "Command & Control",
+    "confidence": 0.961,
+    "threat_score": 91.3,
+    "risk_level": "CRITICAL",
+    "primary_reason": "In 28% of observed sessions where 'Lateral Movement' was the last detected stage, 'Command & Control' was the next attacker action \u2014 this is the strongest transition signal driving the prediction.",
+    "transition_story": "After observing 'Persistence \u2192 Privilege Escalation \u2192 Lateral Movement', the model noted that in 28% of historical attack sessions where an attacker was moving across the network to new hosts, the next observed action was establishing a covert communication channel. The second most likely step was 'Command & Control' (28%).",
+    "context_weights": {
+      "Reconnaissance": 0.0,
+      "Exploitation": 0.0,
+      "Persistence": 0.0,
+      "Privilege Escalation": 0.0,
+      "Lateral Movement": 1.0
+    },
+    "matched_pattern": {
+      "name": "APT Lateral Spread",
+      "sequence": [
+        "Exploitation",
+        "Privilege Escalation",
+        "Lateral Movement"
+      ],
+      "description": "Classic APT progression after initial foothold \u2014 escalate locally, then pivot across the network.",
+      "prevalence": "Characteristic of APT28, APT29, Lazarus Group",
+      "match_score": 0.9
+    },
+    "counterfactual": "If 'Reconnaissance' had been blocked, the predicted 'Command & Control' would not have been reached, reducing threat score by approximately 55 points.",
+    "score_breakdown": {
+      "base": 75,
+      "confidence_boost": 9.6,
+      "depth_boost": 6.7
+    }
+  },
+  {
+    "input_sequence": [
+      "Discovery",
+      "Credential Access"
+    ],
+    "predicted_stage": "Data Exfiltration",
+    "confidence": 0.7,
+    "threat_score": 89.5,
+    "risk_level": "CRITICAL",
+    "primary_reason": "In 70% of observed sessions where 'Credential Access' was the last detected stage, 'Data Exfiltration' was the next attacker action \u2014 this is the strongest transition signal driving the prediction.",
+    "transition_story": "After observing 'Discovery \u2192 Credential Access', the model noted that in 70% of historical attack sessions where an attacker was attempting to steal or brute-force credentials, the next observed action was transferring stolen data to attacker infrastructure. The second most likely step was 'Privilege Escalation' (32%).",
+    "context_weights": {
+      "Discovery": 1.0,
+      "Credential Access": 0.0
+    },
+    "matched_pattern": {
+      "name": "Classic Credential Pivot",
+      "sequence": [
+        "Reconnaissance",
+        "Credential Access",
+        "Exploitation"
+      ],
+      "description": "Most common enterprise intrusion pattern \u2014 recon leads to credential theft, then exploitation of the gained access.",
+      "prevalence": "Seen in 68% of enterprise breaches (Verizon DBIR)",
+      "match_score": 0.25
+    },
+    "counterfactual": "If 'Discovery' had been blocked, the predicted 'Data Exfiltration' would not have been reached, reducing threat score by approximately 55 points.",
+    "score_breakdown": {
+      "base": 80,
+      "confidence_boost": 7.0,
+      "depth_boost": 2.5
+    }
+  }
+]
